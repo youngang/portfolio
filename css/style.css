@@ -1,0 +1,269 @@
+body, div, footer, header{
+    background-color: #89cff0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+h1{
+    text-align: center;
+}
+
+footer, header, nav{
+    display: block;
+}
+
+div.skip a{
+    color: black;
+}
+
+footer{
+    background-color: #89cff0;
+    color: hsl(309, 96%, 30%);
+    padding-top: 30px;
+    text-align: center;
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 7/ auto;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.navbar li{  
+    width: 20%;
+    border: 2px solid black;
+    font-size: 100%;
+    padding: 1% 2%;
+    border-radius: 10px;
+    text-align: center;
+    margin:2px;
+    background-color: white;
+  }
+
+.navbar li.current{
+  background-color: rgb(255, 236, 70);
+}
+
+.navbar{
+    background-color: #89cff0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /*BECAUSE WE ARE DOING ROWS WE NEED TO ALIGN, NOT JUSTIFY*/
+}
+
+.navbar a{
+    text-decoration: none;
+    font-size: 125%;
+    font-weight: bold;
+    color: black;
+}
+
+ul.skills{
+    display: flex;
+    flex-direction: column;
+    color: hsl(309, 96%, 30%);
+    padding: 10px;
+    align-items: right;
+    font-size: 130%;
+}
+
+mark{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.gallery{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 325px 325px 120px;
+    margin: 0 auto 80px;
+    max-width: 80vw;;
+}
+
+.gallery-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid #555;
+    align-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #logo{
+    animation: none;
+    -webkit-animation: none;
+  }
+}
+
+
+    /* ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  li {
+    flex-grow: 1;
+  }
+
+  .navbar{
+      background-color: #89cff0;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      justify-self: flex-end;
+      align-items: flex-start;
+  }
+
+  a{
+      text-decoration: none;
+  } */
+
+
+  /* ul {
+    display: flex;
+    flex-wrap: wrap;
+  }*/
+  
+  /* .flex-gallery.img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+  } */
+
+
+/* .navbar{
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+li{
+    float: right;
+    padding: 10px 10px 10px 10px;
+}  */
+
+/* body{
+    font-family: 'Raleway', sans-serif; 
+    margin: 0;
+    padding: 0;
+    font-size: 16pt; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  h1{
+    font-size: 2em;
+    text-align: center;
+    line-height: 2;
+  }
+  
+  h2{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  p {
+    padding: 0 30px;
+  }
+
+  .nav{
+    display: flex;
+    flex-direction: column;
+  }
+
+  li{
+      display: inline;
+      float: left;
+  }
+
+  a{
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+  }
+
+  .words.h3{
+      font-size: 60px;
+  }
+  
+  footer{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+  }
+
+
+  .flex-gallery{
+    min-height: 600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+ 
+  
+  @media screen and (min-width: 850px){
+  
+    #navbar{
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  
+  @media print { 
+    .card {
+      flex-basis: 200px;
+    }
+  
+    body{
+      background-image: none;
+    }
+  
+    .pricing{
+      align-items: flex-start;
+    }
+  
+    .gallery, #gallery{
+      display: none;
+    }
+
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #logo{
+      animation: none;
+      -webkit-animation: none;
+    }
+  } */
+  
