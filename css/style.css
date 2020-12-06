@@ -1,15 +1,17 @@
-body, div, footer, header{
-    background-color: #89cff0;
+body, footer, header{
+    background-color: #ADD8E6;
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1{
-    text-align: center;
+  text-align: center;
+  font-size: 65px;
 }
 
 footer, header, nav{
@@ -20,9 +22,40 @@ div.skip a{
     color: black;
 }
 
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.typing{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  border-bottom: 5px;
+  letter-spacing: .10em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
 footer{
-    background-color: #89cff0;
-    color: hsl(309, 96%, 30%);
+    background-color: #ADD8E6;
+    color: hsl(309, 96%, 29%);
     padding-top: 30px;
     text-align: center;
     display: grid;
@@ -55,14 +88,15 @@ img {
   }
 
 .navbar li.current{
-  background-color: rgb(255, 236, 70);
+  background-color: #FFE87C;
 }
 
 .navbar{
-    background-color: #89cff0;
+    background-color: #ADD8E6;
     padding: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: flex-end; /*BECAUSE WE ARE DOING ROWS WE NEED TO ALIGN, NOT JUSTIFY*/
 }
 
@@ -76,41 +110,171 @@ img {
 ul.skills{
     display: flex;
     flex-direction: column;
-    color: hsl(309, 96%, 30%);
+    color: hsl(309, 96%, 29%);
     padding: 10px;
     align-items: right;
-    font-size: 130%;
+    font-size: 150%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 mark{
-    background-color: black;
-    color: white;
-    padding: 5px;
-    font-size: 20px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .gallery{
     display: grid;
     gap: 25px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 325px 325px 120px;
+    /* grid-template-rows: 325px 325px 120px; */
     margin: 0 auto 80px;
-    max-width: 80vw;;
+    max-width: 80vw;
 }
 
 .gallery-img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border: 5px solid #555;
+    border: 6px solid white;
     align-content: center;
 }
 
+.gallery-img:hover{
+  opacity: 70%;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+input[type="text"],select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid black;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"]{
+  background-color: grey;
+  color: white;
+  padding: 12px 20px;
+  border:none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover{
+  background-color: pink;
+}
+
+.container{
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.column{
+  float:left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.row::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px){
+  .column, input[type="submit"]{
+    width: 100px;
+    margin-top: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  #logo{
+  .typing{
     animation: none;
     -webkit-animation: none;
   }
+}
+
+.parallax{
+  background-image: url("../images/mylife/parallax.jpg");
+  height: 700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-device-width: 600px){
+  .parallax{
+    background-attachment: scroll;
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  border: 1px solid #f1f1f1;
+  margin: auto;
+   /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner,
+.flip-card:active .flip-card-inner,
+.flip-card:focus .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  position: absolute;
+  width: fix-content;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #FF8040;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.bio-image-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.2) rotateZ(calc(11 * 1deg));
+  transition: transform .2s ease-out;
 }
 
 
